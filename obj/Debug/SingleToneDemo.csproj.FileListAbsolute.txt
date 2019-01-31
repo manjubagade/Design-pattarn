@@ -1,0 +1,14 @@
+C:\Users\Admin\source\repos\SingleToneDemo\SingleToneDemo\bin\Debug\SingleToneDemo.exe.config
+C:\Users\Admin\source\repos\SingleToneDemo\SingleToneDemo\bin\Debug\SingleToneDemo.exe
+C:\Users\Admin\source\repos\SingleToneDemo\SingleToneDemo\bin\Debug\SingleToneDemo.pdb
+C:\Users\Admin\source\repos\SingleToneDemo\SingleToneDemo\obj\Debug\SingleToneDemo.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\SingleToneDemo\SingleToneDemo\obj\Debug\SingleToneDemo.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\SingleToneDemo\SingleToneDemo\obj\Debug\SingleToneDemo.exe
+C:\Users\Admin\source\repos\SingleToneDemo\SingleToneDemo\obj\Debug\SingleToneDemo.pdb
+C:\Users\Admin\Desktop\manjupgm\SingleToneDemo\SingleToneDemo\bin\Debug\SingleToneDemo.exe.config
+C:\Users\Admin\Desktop\manjupgm\SingleToneDemo\SingleToneDemo\bin\Debug\SingleToneDemo.exe
+C:\Users\Admin\Desktop\manjupgm\SingleToneDemo\SingleToneDemo\bin\Debug\SingleToneDemo.pdb
+C:\Users\Admin\Desktop\manjupgm\SingleToneDemo\SingleToneDemo\obj\Debug\SingleToneDemo.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\manjupgm\SingleToneDemo\SingleToneDemo\obj\Debug\SingleToneDemo.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\manjupgm\SingleToneDemo\SingleToneDemo\obj\Debug\SingleToneDemo.exe
+C:\Users\Admin\Desktop\manjupgm\SingleToneDemo\SingleToneDemo\obj\Debug\SingleToneDemo.pdb
