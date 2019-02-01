@@ -21,6 +21,8 @@ namespace SingleToneDemo
     }
     public class Bike : IFactory
     {
+       // public decimal Price { get; internal set; }
+
         public void Drive(int miles)
         {
             Console.WriteLine("Drive the Scooter : " + miles.ToString() + "km");
@@ -32,6 +34,13 @@ namespace SingleToneDemo
         public void Drive(int miles)
         {
             Console.WriteLine("Drive the Bike  :" + miles.ToString() + "km");
+        }
+    }
+    public class Train :IFactory
+    {
+        public void Drive(int miles)
+        {
+            Console.WriteLine("Drive the train : " + miles.ToString() + "km");
         }
     }
     public abstract class VehicleFactory
@@ -50,6 +59,8 @@ namespace SingleToneDemo
                     return new Bike();
                 case "car":
                     return new car();
+                case "Train":
+                    return new Train();
                 default:
                     throw new ApplicationException(string.Format("Vehicle '{0}' cannot be created", Vehicle));
             }

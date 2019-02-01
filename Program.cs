@@ -13,14 +13,18 @@ namespace SingleToneDemo
             string flag = null;
             do
             {
-                Console.WriteLine("PRESS 1 TO SINGLETONE DESIGN PATTARN");
+                Console.WriteLine("---------ENTER YOUR CHOICE--------");
+                Console.WriteLine("");
+                Console.WriteLine("PRESS 1 TO SINGLETONE DESIGN PATTERN");
                 Console.WriteLine("PRESS 2 TO FACTORY PATTARNA");
-                Console.WriteLine("PRESS 3 TO ADAPTER DESIGN PATTARN");
+                Console.WriteLine("PRESS 3 TO ADAPTER DESIGN PATTERN");
                 Console.WriteLine("PRESSS 4 TO FACADE PATTERN ");
-                Console.WriteLine("PRESS 5 TO PrOXY DESIGN PATTARN");
+                Console.WriteLine("PRESS 5 TO PrOXY DESIGN PATTERN");
                 Console.WriteLine("PRESS 6 TO PROXY DESIGN");
-                Console.WriteLine("PRESS 7");
-                Console.WriteLine("PRESS 8");
+                Console.WriteLine("PRESS 7 to Observer ");
+                Console.WriteLine("PRESS 8 to Observer ");
+                Console.WriteLine("PRESS 9 TO VISITER ");
+                Console.WriteLine("PRESS 10 TO MEDIATER ");
                 int n = Convert.ToInt32(Console.ReadLine());
                 switch (n)
                 {
@@ -74,6 +78,23 @@ namespace SingleToneDemo
                     case 8:
                         Observe o = new Observe();
                         o.ObservePattarn();
+                        break;
+                    case 9:
+                        TestVisiter tv = new TestVisiter();
+                        tv.TestVihicle();
+                        break;
+                    case 10:
+                        ConcreteMediator m1 = new ConcreteMediator();
+
+                        ConcreteColleague1 c1 = new ConcreteColleague1(m1);
+                        ConcreteColleague2 c2 = new ConcreteColleague2(m1);
+
+                        m1.Colleague1 = c1;
+                        m1.Colleague2 = c2;
+
+                        c1.Send("How are you?");
+                        c2.Send("Fine, thanks");
+                        c2.Send("HEELO EVERYONE");
                         break;
 
 

@@ -20,6 +20,9 @@ namespace SingleToneDemo
 
             IFactory s = factory.GetVehicle("car");
             s.Drive(90);
+
+            IFactory train = factory.GetVehicle("Train");
+            train.Drive(30);
         }
     }
 }

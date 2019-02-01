@@ -51,7 +51,9 @@
     <Compile Include="IFactory.cs" />
     <Compile Include="Imath.cs" />
     <Compile Include="IProduct.cs" />
+    <Compile Include="Istore.cs" />
     <Compile Include="ITarget.cs" />
+    <Compile Include="Mediater.cs" />
     <Compile Include="Observe.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -60,6 +62,7 @@
     <Compile Include="Stock.cs" />
     <Compile Include="TestAdp.cs" />
     <Compile Include="TestFactory.cs" />
+    <Compile Include="TestVisiter.cs" />
     <Compile Include="ThirdPartyBillingSystem.cs" />
   </ItemGroup>
   <ItemGroup>
