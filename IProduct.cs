@@ -1,15 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿//-----------------------------------------------------------------------
+// <copyright file="IProduct.cs" company="Bridgelabz">
+//     Company copyright tag.
+// </copyright>
+//-----------------------------------------------------------------------
 namespace SingleToneDemo
 {
-   interface IProduct
+    using System;
+    using System.Collections.Generic; 
+    
+    /// <summary>
+    /// this is interface class 
+    /// </summary>
+    
+       interface IProduct
     {
+        /// <summary>
+        /// this Subscribe method
+        /// </summary>
+        /// <param name="customer"></param>
         void Subscribe(Customer customer);
+
+        /// <summary>
+        /// this UnSubscribe method
+        /// </summary>
+        /// <param name="customer"></param> 
         void UnSubscribe(Customer customer);
+
+        /// <summary>
+        /// this Notify method
+        /// </summary>
         void Notify();
     }
     public class Product : IProduct
@@ -18,13 +37,18 @@ namespace SingleToneDemo
         float basePrice;
         float currentPrice;
         List<Customer> customers = new List<Customer>();
+
         public Product(string name,float basePrice)
         {
             this.name = name;
             this.basePrice = basePrice;
             this.currentPrice = basePrice;
         }
-        public float price
+      
+        /// <summary>
+        /// 
+        /// </summary>
+        public float Price
         {
             get
             {
@@ -37,11 +61,16 @@ namespace SingleToneDemo
                     Notify();
             }
         }
+
         public void Subscribe(Customer customer)
         {
             customers.Add(customer);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="customer"></param>
         public void Unsubscribe(Customer customer)
         {
             customers.Remove(customer);
@@ -55,11 +84,18 @@ namespace SingleToneDemo
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="customer"></param>
         public void UnSubscribe(Customer customer)
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public string Name
         {
             get { return name; }
@@ -74,6 +110,10 @@ namespace SingleToneDemo
             get { return currentPrice; }
         }
     }
+
+    /// <summary>
+    /// 
+    /// </summary>
     interface ICustomer
     {
         void Update(Product product);
@@ -81,6 +121,11 @@ namespace SingleToneDemo
     public class Customer : ICustomer
     {
         string name;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="name"></param>
         public Customer(string name)
         {
             this.name = name;

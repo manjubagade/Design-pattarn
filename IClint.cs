@@ -27,7 +27,7 @@ namespace SingleToneDemo
     public class ProXyClint : IClint
     {
         RealClient clint = new RealClient();
-       public ProXyClint()
+        public ProXyClint()
         {
             Console.WriteLine("THE PXOXY CLINT :2");
         }
@@ -36,7 +36,4 @@ namespace SingleToneDemo
             return clint.Getdata();
         }
     }
-
-    
-
 }

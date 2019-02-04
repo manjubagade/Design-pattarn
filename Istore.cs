@@ -1,42 +1,121 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace SingleToneDemo
 {
-    public interface Istore
+    using System;
+
+    /// <summary>
+    /// this is interfave IStore
+    /// </summary>
+    public interface IStore
     {
-        void visit(IVisiter visiter);
+        /// <summary>
+        /// Visits the specified visiter.
+        /// </summary>
+        /// <param name="visiter">The visiter.</param>
+        void Visit(IVisiter visiter);
     }
+
+    /// <summary>
+    /// this is Interface IVisiter
+    /// </summary>
     public interface IVisiter
     {
+        /// <summary>
+        /// Accepts the specified car.
+        /// </summary>
+        /// <param name="car">The car.</param>
         void Accept(Car car);
+        /// <summary>
+        /// Accepts the specified b ike.
+        /// </summary>
+        /// <param name="bIke">The b ike.</param>
         void Accept(BIke bIke);
     }
-    public class Car : Istore
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <seealso cref="SingleToneDemo.IStore" />
+    public class Car : IStore
     {
+        /// <summary>
+        /// Gets or sets the name of the car.
+        /// </summary>
+        /// <value>
+        /// The name of the car.
+        /// </value>
         public string CarName { get; set; }
+
+        /// <summary>
+        /// Gets or sets the price.
+        /// </summary>
+        /// <value>
+        /// The price.
+        /// </value>
         public decimal price { get; set; }
+
+        /// <summary>
+        /// Gets or sets the type of the car.
+        /// </summary>
+        /// <value>
+        /// The type of the car.
+        /// </value>
         public string CarType { get; set; }
 
-        public void visit(IVisiter visiter)
+        /// <summary>
+        /// Visits the specified visiter.
+        /// </summary>
+        /// <param name="visiter">The visiter.</param>
+        public void Visit(IVisiter visiter)
         {
             visiter.Accept(this);
         }
-    }
-    public class BIke : Istore
+    } 
+
+    /// <summary>
+    /// this is Bike class
+    /// </summary>
+    /// <seealso cref="SingleToneDemo.IStore" />
+    public class BIke : IStore
     {
+        /// <summary>
+        /// Gets or sets the name of the bike.
+        /// </summary>
+        /// <value>
+        /// The name of the bike.
+        /// </value>
+        
         public string BikeName { get; set; }
-        public decimal price { get; set; }
+
+        /// <summary>
+        /// Gets or sets the price.
+        /// </summary>
+        /// <value>
+        /// The price.
+        /// </value>
+        public decimal Price { get; set; }
+
+        /// <summary>
+        /// Gets or sets the type of the bike.
+        /// </summary>
+        /// <value>
+        /// The type of the bike.
+        /// </value>
         public string BikeType { get; set; }
 
-        public void visit(IVisiter visiter)
+        /// <summary>
+        /// Visits the specified visiter.
+        /// </summary>
+        /// <param name="visiter">The visiter.</param>
+        public void Visit(IVisiter visiter)
         {
             visiter.Accept(this);
         }
     }
+    /// <summary>
+    /// this class  PriceVisiter 
+    /// </summary>
+    /// <seealso cref="SingleToneDemo.IVisiter" />
     public class PriceVisiter : IVisiter
     {
         private const int Car_Dis = 5;
@@ -47,14 +126,16 @@ namespace SingleToneDemo
             Console.WriteLine("CAR {0} price {1} ", car.price, CarPriceAfterDis);
 
         }
-
         public void Accept(BIke bIke)
         {
-            decimal BikePriceAfterDis = bIke.price - ((bIke.price / 100) * Bike_dis);
-            Console.WriteLine("BIKE {0} price {1}", bIke.price, BikePriceAfterDis);
+            decimal BikePriceAfterDis = bIke.Price - ((bIke.Price / 100) * Bike_dis);
+            Console.WriteLine("BIKE {0} price {1}", bIke.Price, BikePriceAfterDis);
         }
     }
-
+    /// <summary>
+    /// this is WeightVisiter Class
+    /// </summary>
+    /// <seealso cref="SingleToneDemo.IVisiter" />
     public class WeightVisiter : IVisiter
     {
         public void Accept(Car car)
@@ -70,6 +151,10 @@ namespace SingleToneDemo
             }
 
         }
+        /// <summary>
+        /// Accepts the specified b ike.
+        /// </summary>
+        /// <param name="bIke">The b ike.</param>
         public void Accept(BIke bIke)
         {
             switch (bIke.BikeType)
@@ -83,7 +168,10 @@ namespace SingleToneDemo
             }
         }
     }
-
+    /// <summary>
+    /// this class mileage
+    /// </summary>
+    /// <seealso cref="SingleToneDemo.IVisiter" />
     public class Mileage : IVisiter
     {
         public void Accept(Car car)
@@ -99,7 +187,10 @@ namespace SingleToneDemo
             }
 
         }
-
+        /// <summary>
+        /// Accepts the specified b ike.
+        /// </summary>
+        /// <param name="bIke">The b ike.</param>
         public void Accept(BIke bIke)
         {
             switch (bIke.BikeType)

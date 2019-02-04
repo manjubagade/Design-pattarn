@@ -1,13 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//-----------------------------------------------------------------------
+// <copyright file="SingleTonExp.cs" company="Bridgelabz">
+//     Company copyright tag.
+// </copyright>
+//-----------------------------------------------------------------------
 
 namespace SingleToneDemo
 {
+    using System;
+    using System.Threading.Tasks;
+
+    /// <summary>
+    /// this is SingleTonExp design pattern
+    /// </summary>
     public class SingleTonExp
     {
+        /// <summary>
+        /// the SingleToneExp pattern this instance
+        /// </summary>
         public void SingleToneExp()
         {
             Parallel.Invoke(

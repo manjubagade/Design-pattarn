@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿//-----------------------------------------------------------------------
+// <copyright file=" Program.cs" company="Bridgelabz">
+//     Company copyright tag.
+// </copyright>
+//-----------------------------------------------------------------------
 namespace SingleToneDemo
 {
-    class Program
+    using System;
+
+    /// <summary>
+    /// this is the main program 
+    /// </summary>
+   public class Program
     {
         static void Main(string[] args)
         {
@@ -50,10 +54,10 @@ namespace SingleToneDemo
                         break;
                     case 6:
                         MathProxy m = new MathProxy();
-                       Console.WriteLine(+ m.add(4,2));
-                       Console.WriteLine(+ m.sub(10, 2));
-                       Console.WriteLine(+  m.mal(10, 6));
-                       Console.WriteLine(+  m.div(10, 2));
+                       Console.WriteLine(+ m.Add(4,2));
+                       Console.WriteLine(+ m.Sub(10, 2));
+                       Console.WriteLine(+  m.Mal(10, 6));
+                       Console.WriteLine(+  m.Div(10, 2));
                         break;
                     case 7:
                         IBM ibm = new IBM("IBM", 120.00);
@@ -95,6 +99,7 @@ namespace SingleToneDemo
                         c1.Send("How are you?");
                         c2.Send("Fine, thanks");
                         c2.Send("HEELO EVERYONE");
+                        c1.Send("good morning ");
                         break;
 
 

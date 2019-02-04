@@ -51,17 +51,18 @@ namespace SingleToneDemo
     }
 
     /// <summary>
-
     /// The 'Colleague' abstract class
-
     /// </summary>
 
     abstract class Colleague
 
     {
 
-        // Constructor
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Colleague"/> class.
+        /// </summary>
+        /// <param name="mediator">The mediator.</param>
         public Colleague(Mediator mediator)
         {
             this.Mediator = mediator;

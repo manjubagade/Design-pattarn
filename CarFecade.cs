@@ -1,26 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿//-----------------------------------------------------------------------
+// <copyright file="CarFecade1.cs" company="Bridgelabz">
+//     Company copyright tag.
+// </copyright>
+//-----------------------------------------------------------------------
 namespace SingleToneDemo
 {
-        public class CarFecade1
+    using System;
+
+    /// <summary>
+    /// this CarFecade1 class
+    /// </summary>
+    public class CarFecade1
         {
          private  CarModel model;
            private CarEngine engine;
             private CarBody body;
            private CarAccessories accssores;
 
-            public CarFecade1()
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CarFecade1"/> class.
+        /// </summary>
+        public CarFecade1()
         {
                 model = new CarModel();
                 engine = new CarEngine();
                 body = new CarBody();
                 accssores = new CarAccessories();
             }
-            public void CompleteDetails()
+        /// <summary>
+        /// Completes the details.
+        /// </summary>
+        public void CompleteDetails()
             {
                 model.SetModel();
                 engine.SetEngine();

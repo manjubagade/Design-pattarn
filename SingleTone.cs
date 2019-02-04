@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿//-----------------------------------------------------------------------
+// <copyright file="SingleTone.cs" company="Bridgelabz">
+//     Company copyright tag.
+// </copyright>
+//-----------------------------------------------------------------------
 namespace SingleToneDemo
 {
-   public sealed class SingleTone
+    using System;
+
+   /// <summary>
+   /// the singleTone design pattern 
+   /// </summary>
+    public sealed class SingleTone
     {
         private static int count = 10;
         private static readonly Lazy<SingleTone> instance = new Lazy<SingleTone>(()=> new SingleTone());
@@ -24,9 +28,9 @@ namespace SingleToneDemo
                     ////}
                 ////}
                 return instance.Value;
-            }
-            
+            } 
         }
+        //// the private constracter 
         private SingleTone()
         {
             count++;

@@ -1,63 +1,96 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace SingleToneDemo
 {
-    public interface Imath
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
+    public interface IMath
     {
-        double add(double x, double y);
-        double sub(double x, double y);
-        double mal(double x, double y);
-        double div(double x, double y);
+        /// <summary>
+        /// Adds the specified x.
+        /// </summary>
+        /// <param name="x">The x.</param>
+        /// <param name="y">The y.</param>
+        /// <returns></returns>
+        double Add(double x, double y);
+
+        /// <summary>
+        /// Subs the specified x.
+        /// </summary>
+        /// <param name="x">The x.</param>
+        /// <param name="y">The y.</param>
+        /// <returns></returns>
+        double Sub(double x, double y);
+        
+        /// <summary>
+        /// Mals the specified x.
+        /// </summary>
+        /// <param name="x">The x.</param>
+        /// <param name="y">The y.</param>
+        /// <returns></returns>
+        double Mal(double x, double y);
+
+        /// <summary>
+        /// Divs the specified x.
+        /// </summary>
+        /// <param name="x">The x.</param>
+        /// <param name="y">The y.</param>
+        /// <returns></returns>
+        double Div(double x, double y);
 
     }
-    public class math : Imath
+
+    /// <summary>
+    /// this class math
+    /// </summary>
+    /// <seealso cref="SingleToneDemo.IMath" />
+    public class Math : IMath
     {
-        public double add(double x, double y)
+        public double Add(double x, double y)
         {
             return x + y;
         }
 
-        public double sub(double x, double y)
+        public double Sub(double x, double y)
         {
             return x - y;
         }
 
-        public double mal(double x, double y)
+        public double Mal(double x, double y)
         {
             return x * y;
         }
 
-        public double div(double x, double y)
+        public double Div(double x, double y)
         {
             return x / y;
         }
     }
-    public class MathProxy : Imath
+    public class MathProxy : IMath
 
     {
-        private math m = new math();
-        public double add(double x, double y)
+        private Math m = new Math();
+        public double Add(double x, double y)
         {
-            return m.add(x, y);
+            return m.Add(x, y);
         }
 
-        public double div(double x, double y)
+        public double Div(double x, double y)
         {
-            return m.sub(x, y);
+            return m.Sub(x, y);
         }
 
-        public double mal(double x, double y)
+        public double Mal(double x, double y)
         {
-            return m.mal(x, y);
+            return m.Mal(x, y);
         }
 
-        public double sub(double x, double y)
+        public double Sub(double x, double y)
         {
-            return m.div(x,y);
+            return m.Div(x,y);
         }
     }
 }
